@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void sayHello(){
+void myproject::sayHello(){
     cout << "Hello, World!" << endl;
 
     cout << "Write the name to continue or 'exit' to end the program" << endl;
