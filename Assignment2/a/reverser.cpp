@@ -32,7 +32,7 @@ void reverseFile()
     input.read(buffer, size);
     input.close();
 
-    for (int i = 0; i < size / 2; i++)
+    for (uint32_t i = 0; i < size / 2; i++)
     {
         std::swap(buffer[i], buffer[size - i - 1]);
     }
