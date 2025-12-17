@@ -1,4 +1,4 @@
-/* 
+/*
 Vorobyev Dmitriy | st140149@student.spbu.ru
 Assignment 3
 */
@@ -12,7 +12,7 @@ Assignment 3
 #include "Engine.h"
 
 
-TEST(EngineTest, GetSetType) 
+TEST(EngineTest, GetSetType)
 {
     Engine engine("V8");
     EXPECT_EQ(engine.get_engine_type(), "V8");
@@ -22,14 +22,14 @@ TEST(EngineTest, GetSetType)
 }
 
 
-TEST(OperatorTest, GetName) 
+TEST(OperatorTest, GetName)
 {
     Operator op("Valera");
     EXPECT_EQ(op.get_name(), "Valera");
 }
 
 
-TEST(TransformerTest, ConstructorAndBasicFields) 
+TEST(TransformerTest, ConstructorAndBasicFields)
 {
     Operator op("Valera");
     Transformer transformer("MrTransformer", 50, 100, 200, true, "V121", &op);
@@ -43,7 +43,7 @@ TEST(TransformerTest, ConstructorAndBasicFields)
     EXPECT_EQ(transformer.get_engine().get_engine_type(), "V121");
 }
 
-TEST(TransformerTest, CompositionEngine) 
+TEST(TransformerTest, CompositionEngine)
 {
     Operator op("Valeriy");
     Transformer transformer("MrRobot", 60, 120, 254, true, "Hybrid", &op);
@@ -54,7 +54,7 @@ TEST(TransformerTest, CompositionEngine)
     EXPECT_EQ(transformer.get_engine().get_engine_type(), "Hydrogen");
 }
 
-TEST(TransformerTest, MethodsReturnTrue) 
+TEST(TransformerTest, MethodsReturnTrue)
 {
     Operator op("Anton");
     Transformer transformer("OptimusPride", 66, 123, 111, true, "Atomic", &op);
@@ -65,7 +65,7 @@ TEST(TransformerTest, MethodsReturnTrue)
 }
 
 
-TEST(TankTransformerTest, ConstructorAndSpecificFields) 
+TEST(TankTransformerTest, ConstructorAndSpecificFields)
 {
     Operator op("Max");
     TankTransformer tank("MrTank", 88, 99, 111, true, "V12", &op, 5, "Gigamegamissile");
@@ -82,7 +82,7 @@ TEST(TankTransformerTest, ConstructorAndSpecificFields)
     EXPECT_EQ(tank.get_missile_type(), "Gigamegamissile");
 }
 
-TEST(TankTransformerTest, SettersWork) 
+TEST(TankTransformerTest, SettersWork)
 {
     Operator op("Valentin");
     TankTransformer tank("Tank", 80, 200, 300, true, "V12", &op, 5, "BigMissile");
@@ -94,7 +94,7 @@ TEST(TankTransformerTest, SettersWork)
     EXPECT_EQ(tank.get_missile_type(), "VeryBigMissile");
 }
 
-TEST(TankTransformerTest, IsDriving) 
+TEST(TankTransformerTest, IsDriving)
 {
     Operator op("Nikolay");
     TankTransformer tank("MrTank", 80, 200, 300, true, "V12", &op, 5, "BigMissile");
@@ -102,7 +102,7 @@ TEST(TankTransformerTest, IsDriving)
     EXPECT_TRUE(tank.is_driving());
 }
 
-int main(int argc, char **argv) 
+int main(int argc, char **argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();

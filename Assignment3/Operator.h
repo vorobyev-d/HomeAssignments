@@ -1,4 +1,4 @@
-/* 
+/*
 Vorobyev Dmitriy | st140149@student.spbu.ru
 Assignment 3
 */
@@ -13,13 +13,13 @@ Assignment 3
 
 class Operator
 {
-    public:
-        Operator(std::string type);
+public:
+    Operator(std::string type);
 
-        std::string get_name();
+    std::string get_name();
 
-    private:
-       std::string name_;
+private:
+    std::string name_;
 };
 
 

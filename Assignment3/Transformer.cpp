@@ -1,4 +1,4 @@
-/* 
+/*
 Vorobyev Dmitriy | st140149@student.spbu.ru
 Assignment 3
 */
@@ -8,10 +8,10 @@ Assignment 3
 #include "Transformer.h"
 
 
-Transformer::Transformer(std::string name, int power, int ammo, int health, 
-    bool is_ready_to_fight, std::string engine_type, Operator* transformer_operator) 
-    : name_(name), power_(power), ammo_(ammo), health_(health), is_ready_to_fight_(is_ready_to_fight), 
-    engine_(engine_type), transformer_operator_(transformer_operator) {}
+Transformer::Transformer(std::string name, int power, int ammo, int health,
+                         bool is_ready_to_fight, std::string engine_type, Operator* transformer_operator)
+    : name_(name), power_(power), ammo_(ammo), health_(health), is_ready_to_fight_(is_ready_to_fight),
+      engine_(engine_type), transformer_operator_(transformer_operator) {}
 
 Transformer::~Transformer() {}
 
@@ -88,7 +88,7 @@ void Transformer::set_operator(Operator* transformer_operator)
 bool Transformer::fire()
 {
     return true;
-} 
+}
 
 bool Transformer::transform()
 {
