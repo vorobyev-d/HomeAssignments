@@ -4,7 +4,7 @@
 ## Contacts
 st140149@student.spbu.ru
 ## Descriotion 
-C++ project implements template matrix class which supports some matrix operations and a Rationalclass for fractional arithmetic
+C++ project implements template matrix class which supports some matrix operations and a Rational numbers class for fractional arithmetic
 ## Build
 make
 ## Run
