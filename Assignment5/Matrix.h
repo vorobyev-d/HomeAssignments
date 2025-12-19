@@ -76,11 +76,11 @@ public:
     Matrix Transpose()
     {
         Matrix result(columns_, rows_);
-        for (std::size_t j = 0; j < columns_; ++j)
+        for (std::size_t i = 0; i < rows_; ++i)
         {
-            for (std::size_t i = 0; i < rows_; ++i)
+            for (std::size_t j = 0; j < columns_; ++j)
             {
-                result(i, j) = (*this)(j, i);
+                result(j, i) = (*this)(i, j);
             }
         }
         return result;
