@@ -65,7 +65,7 @@ void Transformer::set_is_ready_to_fight(bool is_ready_to_fight)
     is_ready_to_fight_ = is_ready_to_fight;
 }
 
-Engine Transformer::get_engine()
+Engine& Transformer::get_engine()
 {
     return engine_;
 }

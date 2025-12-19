@@ -38,7 +38,7 @@ public:
     bool get_is_ready_to_fight();
     void set_is_ready_to_fight(bool is_ready_to_fight);
 
-    Engine get_engine();
+    Engine& get_engine();
     void set_engine(std::string engine_type);
 
     Operator* get_operator();
