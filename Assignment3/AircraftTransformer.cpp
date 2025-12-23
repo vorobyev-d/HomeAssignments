@@ -14,7 +14,7 @@ AircraftTransformer::AircraftTransformer(std::string name, int power, int ammo, 
       max_speed_(max_speed), has_missiles_(has_missiles) {}
 
 AircraftTransformer::AircraftTransformer(int power, int ammo, std::string engine_type, bool has_missiles)
-: Transformer(power, ammo, engine_type), has_missiles_(has_missiles) {}
+    : Transformer(power, ammo, engine_type), has_missiles_(has_missiles) {}
 
 
 int AircraftTransformer::get_max_speed()

@@ -30,9 +30,9 @@ public:
     void ultimate_ability() override;
     void defence_mode() override;
     void transformer_info() override;
-    
+
     void output(std::ostream& os) override;
-    
+
 
 private:
     int armour_level_;

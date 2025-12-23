@@ -14,8 +14,8 @@ Transformer::Transformer(std::string name, int power, int ammo, int health,
     : name_(name), power_(power), ammo_(ammo), health_(health), is_ready_to_fight_(is_ready_to_fight),
       engine_(engine_type), transformer_operator_(transformer_operator) {}
 
-Transformer::Transformer(int power, int ammo, std::string engine_type) 
-: power_(power), ammo_(ammo), engine_(engine_type) {}
+Transformer::Transformer(int power, int ammo, std::string engine_type)
+    : power_(power), ammo_(ammo), engine_(engine_type) {}
 
 Transformer::~Transformer() {}
 

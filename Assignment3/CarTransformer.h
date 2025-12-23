@@ -28,7 +28,7 @@ public:
     bool is_driving();
 
     void ultimate_ability() override;
-    void defence_mode() override; 
+    void defence_mode() override;
     void transformer_info() override;
 
     void output(std::ostream& os) override;

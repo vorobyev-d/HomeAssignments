@@ -16,8 +16,8 @@ TankTransformer::TankTransformer(std::string name, int power, int ammo, int heal
     : Transformer(name, power, ammo, health, is_ready_to_fight, engine_type, transformer_operator),
       armour_level_(armour_level), missile_type_(missile_type) {}
 
-TankTransformer::TankTransformer(int power, int ammo, int armour_level, std::string engine_type) 
-: Transformer(power, ammo, engine_type), armour_level_(armour_level) {}
+TankTransformer::TankTransformer(int power, int ammo, int armour_level, std::string engine_type)
+    : Transformer(power, ammo, engine_type), armour_level_(armour_level) {}
 
 int TankTransformer::get_armour_level()
 {
