@@ -1,11 +1,12 @@
 /*
 Vorobyev Dmitriy | st140149@student.spbu.ru
-Assignment 3
+Assignment 4
 */
 
 
 #include "TankTransformer.h"
 
+#include <iostream>
 #include <string>
 
 
@@ -15,6 +16,8 @@ TankTransformer::TankTransformer(std::string name, int power, int ammo, int heal
     : Transformer(name, power, ammo, health, is_ready_to_fight, engine_type, transformer_operator),
       armour_level_(armour_level), missile_type_(missile_type) {}
 
+TankTransformer::TankTransformer(int power, int ammo, int armour_level, std::string engine_type) 
+: Transformer(power, ammo, engine_type), armour_level_(armour_level) {}
 
 int TankTransformer::get_armour_level()
 {
@@ -44,3 +47,22 @@ bool TankTransformer::is_driving()
 }
 
 
+void TankTransformer::ultimate_ability()
+{
+    std::cout << "TankTransformer::ultimate_ability" << std::endl;
+}
+
+void TankTransformer::defence_mode()
+{
+    std::cout << "TankTransformer::defence_mode" << std::endl;
+}
+
+void TankTransformer::transformer_info()
+{
+    std::cout << "TankTransformer::transformer_info" << std::endl;
+}
+
+void TankTransformer::output(std::ostream& os)
+{
+    os << "TankTransformer";
+}

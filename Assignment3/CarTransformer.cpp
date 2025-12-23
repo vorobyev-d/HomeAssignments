@@ -1,6 +1,6 @@
 /*
 Vorobyev Dmitriy | st140149@student.spbu.ru
-Assignment 3
+Assignment 4
 */
 
 
@@ -14,6 +14,9 @@ CarTransformer::CarTransformer(std::string name, int power, int ammo, int health
                                int max_speed, std::string car_type)
     : Transformer(name, power, ammo, health, is_ready_to_fight, engine_type, transformer_operator),
       max_speed_(max_speed), car_type_(car_type) {}
+
+CarTransformer::CarTransformer(int power, int ammo, int max_speed, std::string engine_type) 
+: Transformer(power, ammo, engine_type), max_speed_(max_speed) {}
 
 
 int CarTransformer::get_max_speed()
@@ -43,4 +46,22 @@ bool CarTransformer::is_driving()
     return true;
 }
 
+void CarTransformer::ultimate_ability()
+{
+    std::cout << "CarTransformer::ultimate_ability" << std::endl;
+}
 
+void CarTransformer::defence_mode()
+{
+    std::cout << "CarTransformer::defence_mode" << std::endl;
+}
+
+void CarTransformer::transformer_info()
+{
+    std::cout << "CarTransformer::transformer_info" << std::endl;
+}
+
+void CarTransformer::output(std::ostream& os)
+{
+    os << "CarTransformer";
+}

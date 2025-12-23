@@ -1,6 +1,7 @@
+
 /*
 Vorobyev Dmitriy | st140149@student.spbu.ru
-Assignment 3
+Assignment 4
 */
 
 
@@ -8,6 +9,7 @@ Assignment 3
 #define TRANSFORMER_H
 
 
+#include <iostream>
 #include <string>
 
 #include "Engine.h"
@@ -20,7 +22,10 @@ public:
     Transformer(std::string name, int power, int ammo, int health, bool is_ready_to_fight,
                 std::string engine_type, Operator* transformer_operator);
 
-    ~Transformer();
+    Transformer(int power, int ammo, std::string engine_type);
+    Transformer(Operator* transformer_operator);
+
+    virtual ~Transformer();
 
 
     std::string get_name();
@@ -44,6 +49,13 @@ public:
     Operator* get_operator();
     void set_operator(Operator* transformer_operator);
 
+
+    virtual void ultimate_ability() = 0;
+    virtual void defence_mode();
+    virtual void transformer_info();
+
+    virtual void output(std::ostream& os);
+
     bool transform();
     bool fire();
     bool reload();
@@ -58,6 +70,8 @@ private:
     Operator* transformer_operator_;
 
 };
+
+std::ostream& operator<<(std::ostream& os, Transformer& transformer);
 
 
 
