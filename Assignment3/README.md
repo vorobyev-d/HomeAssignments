@@ -1,4 +1,4 @@
-# Assignment 3
+# Assignment 4
 ## Author
 Воробьев Дмитрий 25.Б81-мм
 ## Contacts
@@ -8,6 +8,6 @@ A C++ OOP project implementing an inheritance hierarchy with composition and ass
 ## Build
 make
 ## Run
-./a3
+./a4
 ## Clean
 make clean

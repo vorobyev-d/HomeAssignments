@@ -1,6 +1,6 @@
-PROJECT = a3
+PROJECT = a4
 CXX = g++
-CXXFLAGS = -Wall -Wextra
+CXXFLAGS = -Wall -Wextra -Wpedantic -Werror
 GTEST_LIBS = -lgtest -lgtest_main -pthread 
 SRC = main.cpp Transformer.cpp TankTransformer.cpp Operator.cpp Engine.cpp CarTransformer.cpp AircraftTransformer.cpp
 OBJ = $(SRC:.cpp=.o)

@@ -1,8 +1,9 @@
 /*
 Vorobyev Dmitriy | st140149@student.spbu.ru
-Assignment 3
+Assignment 4
 */
 
+#include <iostream>
 #include <string>
 
 #include "Transformer.h"
@@ -12,6 +13,9 @@ Transformer::Transformer(std::string name, int power, int ammo, int health,
                          bool is_ready_to_fight, std::string engine_type, Operator* transformer_operator)
     : name_(name), power_(power), ammo_(ammo), health_(health), is_ready_to_fight_(is_ready_to_fight),
       engine_(engine_type), transformer_operator_(transformer_operator) {}
+
+Transformer::Transformer(int power, int ammo, std::string engine_type)
+    : power_(power), ammo_(ammo), engine_(engine_type) {}
 
 Transformer::~Transformer() {}
 
@@ -100,3 +104,24 @@ bool Transformer::reload()
     return true;
 }
 
+void Transformer::defence_mode()
+{
+    std::cout << "Transformer::defence_mode" << std::endl;
+}
+
+void Transformer::transformer_info()
+{
+    std::cout << "Transformer::transformer_info" << std::endl;
+}
+
+
+void Transformer::output(std::ostream& os)
+{
+    os << "Transformer";
+}
+
+std::ostream& operator<<(std::ostream& os, Transformer& transformer)
+{
+    transformer.output(os);
+    return os;
+}

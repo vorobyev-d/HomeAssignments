@@ -1,6 +1,6 @@
 /*
 Vorobyev Dmitriy | st140149@student.spbu.ru
-Assignment 3
+Assignment 4
 */
 
 
@@ -17,7 +17,7 @@ class TankTransformer : public Transformer
 {
 public:
     TankTransformer(std::string name, int power, int ammo, int health, bool is_ready_to_fight, std::string engine_type, Operator* transformer_operator, int armour_level, std::string missile_type);
-
+    TankTransformer(int power, int ammo, int armour_level, std::string engine_type);
 
     int get_armour_level();
     void set_armour_level(int armour_level);
@@ -27,9 +27,17 @@ public:
 
     bool is_driving();
 
+    void ultimate_ability() override;
+    void defence_mode() override;
+    void transformer_info() override;
+
+    void output(std::ostream& os) override;
+
+
 private:
     int armour_level_;
     std::string missile_type_;
 };
+
 
 #endif
